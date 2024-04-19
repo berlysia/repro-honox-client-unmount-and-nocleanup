@@ -6,10 +6,12 @@ import { defineConfig } from 'vite'
 export default defineConfig(({ mode }) => {
   if (mode === 'client') {
     return {
+      base: "./",
       plugins: [client()]
     }
   } else {
     return {
+      base: "./", //  not works!
       build: {
         emptyOutDir: false,
       },
